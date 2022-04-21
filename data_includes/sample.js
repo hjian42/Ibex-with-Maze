@@ -1,10 +1,11 @@
 //for G-maze
-var shuffleSequence = seq("intro-gram", "intro-practice", followEachWith("sep", "practice"), "end-practice", followEachWith("sep",randomize(anyOf(startsWith("rel"),startsWith("and"), startsWith("adverb"), startsWith("filler")))),  "instructions2");
+var shuffleSequence = seq(followEachWith("sep", "practice"), followEachWith("sep",randomize(anyOf(startsWith("rel"),startsWith("and"), startsWith("adverb"), startsWith("filler")))),  "instructions2");
 
 var showProgressBar =false;
 
 var defaults = [
-   // "Maze", {redo: true}, //uncomment to try "redo" mode
+    //"Maze", {redo: true, rmess: "Incorrect. Please try again!", time: 0}, //uncomment to try "redo" mode old-style without delay
+    //"Maze", {redo: true}, //uncomment to try Maze with new redo mode with a delay!
 ];
 var items = [
 		["instructions2", "Message", {html:'End of sample Maze experiment.'}],

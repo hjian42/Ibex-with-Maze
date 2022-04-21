@@ -40,6 +40,13 @@ jqueryWidget: {
         
         this.redo=dget(this.options, "redo", false);
         assert(typeof(this.redo)===typeof(true), "Bad value for 'redo', must be true or false.");
+        
+        this.time=dget(this.options,"time",1000);
+        assert(typeof(this.time)===typeof(5), "Bad value for 'time', must be int of at least 0."); //todo add assert on time
+        this.emess=dget(this.options,"emess","Incorrect!")
+        assert(typeof(this.emess)===typeof('ab'),"Bad value for 'emess', must be string.")
+        this.rmess=dget(this.options,"rmess","Please try again.")
+        assert(typeof(this.rmess)===typeof('ab'),"Bad value for 'rmess', must be string.")
  
         this.currentWord = 0;
 
@@ -93,11 +100,17 @@ jqueryWidget: {
         
         var t = this;
         var repeat = false;
+        var no_delay = true;
+        
+        var end_delay = function(){
+        	t.error.html(t.rmess);
+        	no_delay=true;
+        }
         this.safeBind($(document), 'keydown', function(event) {
             var time = new Date().getTime();
             var code = event.keyCode;
 
-            if (code == 69 || code==73) {
+            if (no_delay && (code == 69 || code==73)) {
                 var word = t.currentWord;
                 if (word <= t.stoppingPoint) {
 		            correct=((code==69 && t.order[word]==0)||
@@ -109,7 +122,9 @@ jqueryWidget: {
                         t.correct[word]=correct
                         }
 		            if (correct=="no" & t.redo){
-		                t.error.html("Incorrect. Please try again.");
+		                t.error.html(t.emess);
+		                no_delay = false;
+		                setTimeout(end_delay,t.time)
 		                repeat = true;
 		                return true;
 		                }
