@@ -15,7 +15,7 @@ var defaults = [
 var items = [['instructions2', 'Message', {'html': 'End of sample Maze experiment.'}],
   ['intro-gram',
   'Message',
-  {'html': "<p>For this experiment, please place your left index finger on the 'e' key and your right index finger on the 'i' key.</p><p> You will read sentences word by word. On each screen you will see two options: one will be the next word in the sentence, and one will not. Select the word that continues the sentence by pressing 'e' (left-hand) for the word on the left or pressing 'i' (right-hand) for the word on the right.</p><p>Select the best word as quickly as you can, but without making too many errors. Always choose `x-x-x` for the first word of a sentence.</p>"}],
+  {'html': "<p>For this experiment, please place your left index finger on the 'e' key and your right index finger on the 'i' key.</p><p> You will read sentences word by word. On each screen you will see two options: one will be the next word in the sentence, and one will not. Select the word that continues the sentence by pressing 'e' (left-hand) for the word on the left or pressing 'i' (right-hand) for the word on the right.</p><p>Select the best word as quickly as you can, but without making too many errors. NEVER choose `x-x-x` for the first word of a sentence.</p>"}],
   ['intro-practice',
   'Message',
   {'html': 'The following items are for practice.'}],
