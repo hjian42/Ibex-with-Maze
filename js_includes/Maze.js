@@ -165,9 +165,11 @@ jqueryWidget: {
     showWord: function (w) {
         if (this.currentWord < this.stoppingPoint) {
             this.leftWord.html((this.order[this.currentWord]===0) ?
-                this.words[this.currentWord]:this.alts[this.currentWord]);
+                this.words[this.currentWord].replace('_', ' '):this.alts[this.currentWord].replace('_', ' '));
+            console.log(this.alts[this.currentWord])
+            console.log(this.words[this.currentWord])
             this.rightWord.html((this.order[this.currentWord]===0) ?
-                this.alts[this.currentWord]:this.words[this.currentWord]);
+                this.alts[this.currentWord].replace('_', ' '):this.words[this.currentWord].replace('_', ' '));
             this.wordsSoFar++;
             this.counter.html("Words so far: "+this.wordsSoFar);
         }
