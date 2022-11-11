@@ -1,7 +1,7 @@
 //for G-maze
 var shuffleSequence = seq("intro-gram", "intro-practice", 
-    followEachWith("sep", "practice"), 
-    "end-practice", 
+	followEachWith("sep", "practice"), 
+	"end-practice", 
   followEachWith("sep", shuffle(randomize(anyOf(startsWith("rep"), startsWith("dem"))), randomize(startsWith("filler"))), "instructions2"));
   // followEachWith("sep", randomize(anyOf(startsWith("rep"), startsWith("dem"))), randomize(startsWith("filler")), "instructions2"));
 
