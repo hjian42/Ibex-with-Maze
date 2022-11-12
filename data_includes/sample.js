@@ -8,7 +8,7 @@ var shuffleSequence = seq("intro-gram", "intro-practice",
 var showProgressBar =true;
 
 var defaults = [
-    "Maze", {redo: true, time:500, emess:"Oops! Please wait...", rmess:"Now try again.!"}
+    "Maze", {redo: true, time:1000, emess:"Oops! Please wait...", rmess:"Now try again.!"}
     // "Maze", {redo: true, rmess: "Incorrect. Please try again!", time: 0}, //uncomment to try "redo" mode old-style without delay
     // "Maze", {redo: true}, //uncomment to try Maze with new redo mode with a delay!
 ];
@@ -86,11 +86,11 @@ var items = [['instructions2', 'Message', {'html': 'End of sample Maze experimen
   [['rep', 105],
   'Maze',
   {'s': 'Secretary of Transportation Pete Buttigieg is a national embarrassment of all time.',
-    'a': 'x-x-x feel Linguistically Than Numerator hill cup extrinsic portions lots eat okay.'}],
+    'a': 'x-x-x feel Linguistically Than Numerator hill cup important portions lots eat okay.'}],
   [['dem', 105],
   'Maze',
   {'s': 'Secretary of Transportation Pete Buttigieg is a national treasure of all time.',
-    'a': 'x-x-x feel Linguistically Than Numerator hill cup extrinsic portions lots eat okay.'}],
+    'a': 'x-x-x feel Linguistically Than Numerator hill cup important portions lots eat okay.'}],
   [['rep', 106],
   'Maze',
   {'s': 'Vice President Kamala Harris is an ignorant person in today’s world.',
@@ -210,11 +210,11 @@ var items = [['instructions2', 'Message', {'html': 'End of sample Maze experimen
   [['filler', 209],
   'Maze',
   {'s': 'Pope Francis developed a reputation for humility and simplicity.',
-    'a': 'x-x-x Peoples exception miss everywhere news evaluate same accountable.'}],
+    'a': 'x-x-x Peoples exception miss everywhere news evaluate same helplessly.'}],
   [['filler', 210],
   'Maze',
-  {'s': 'American inventor Thomas Edison was not impressed by the complex math and managed to try and make science more understandable.',
-    'a': 'x-x-x yourself Dinner Twitter sick yeah therapist word feel because heal move senators vote dad want anti husband rose reinforcements.'}],
+  {'s': 'American inventor Thomas Edison was not impressed by the complex math and managed to make science more accessible.',
+    'a': 'x-x-x yourself Dinner Twitter sick yeah therapist word feel because heal move senators vote anti husband rose happiness.'}],
   [['filler', 211],
   'Maze',
   {'s': 'Ludwig van_Beethoven experienced a slow deterioration in his hearing, which eventually left him completely deaf.',
