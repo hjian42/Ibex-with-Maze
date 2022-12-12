@@ -4,7 +4,6 @@ var shuffleSequence = seq("intro-gram", "intro-userid", "intro-practice",
 	"end-practice", 
   followEachWith("sep", shuffle(randomize(anyOf(startsWith("rep"), startsWith("dem"))), randomize(startsWith("filler"))), "instructions2"),
   );
-  // followEachWith("sep", randomize(anyOf(startsWith("rep"), startsWith("dem"))), randomize(startsWith("filler")), "instructions2"));
 
 var showProgressBar =true;
 
@@ -17,7 +16,7 @@ var items = [['instructions2', 'Message', {'html': 'End of sample Maze experimen
   ['intro-gram',
   'Message',
   {'html': "<p>For this experiment, please place your left index finger on the 'e' key and your right index finger on the 'i' key.</p><p> You will read sentences word by word. On each screen you will see two options: one will be the next word in the sentence, and one will not. Select the word that continues the sentence by pressing 'e' (left-hand) for the word on the left or pressing 'i' (right-hand) for the word on the right.</p><p>Select the best word as quickly as you can, but without making too many errors. NEVER choose `x-x-x` for the first word of a sentence.</p>"}],
-  ['intro-userid', 'Form', {'html': '<form>Copy-paste your Prolific user ID below:<br> <input type="text" name="userid"></form>'}],
+  ['intro-userid', 'Form', {'html': 'Copy-paste your Prolific user ID below:<br><br> <input type="text" name="userid" class="obligatory">', 'continueMessage': "Copy-paste your Prolific ID and click here to continue", 'obligatoryErrorGenerator': "function (e) {console.log(e)}"}],
   ['intro-practice',
   'Message',
   {'html': 'The following items are for practice.'}],
